@@ -48,8 +48,6 @@
 
             //se salvar deu certo, retorna a página inicial, do contrário, gera mensagem de erro
             if($res){
-                ?>
-                <?php
                 header("location: index.php");
             }else{
                 echo "algo deu errado";

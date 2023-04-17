@@ -1,7 +1,7 @@
 <?php
     include_once('conexao.php');
 
-    //Recupera valor ID passdo pelo editar do index
+    //Recupera valor ID passado pelo editar do index
     $id = $_GET['id'];
 
     //Seleciona no BD a informação de acordo com o ID passado
@@ -11,6 +11,21 @@
 
     //Transforma o resultado da consulta em um array com as informações da anotação
     $row = mysqli_fetch_assoc($res);
+
+    if(isset($_POST['salvar'])){
+        $titulo = $_POST['titulo'];
+        $descricao = $_POST['descricao'];
+
+    $sqlUpdate = "UPDATE anotacoes SET titulo = '$titulo' , descricao = '$descricao' WHERE idAnotacoes = $id";
+    
+    $resUpdate = mysqli_query($con, $sqlUpdate);
+
+    if($resUpdate){
+        header("location: index.php");
+    }else{
+        echo "algo deu errado";
+    }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,13 +38,13 @@
 </head>
 <body>
 <a href="index.php">Voltar</a>
-    <form action="index.php" method="POST">
+    <form action="editar.php?id=<?php echo $id?>" method="POST">
         <label for="titulo">Título da anotação:</label> 
         <br>
-        <input type="text" value="<?php echo $row['titulo'];?>">
+        <input name="titulo" type="text" value="<?php echo $row['titulo'];?>">
         <br>
         <br>
-        <textarea rows="10" cols="30"><?php echo $row['descricao'];?></textarea>
+        <textarea name="descricao" rows="10" cols="30"><?php echo $row['descricao'];?></textarea>
         <br>
         <div name="data">
             <?php $dat = date('Y/m/d');
