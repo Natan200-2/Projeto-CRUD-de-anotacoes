@@ -41,7 +41,7 @@
             }
 
             // caso a conexão tenha dado certo, é gerado uma variável com o comando em sql
-            $sql = "INSERT INTO anotacoes (titulo , descricao , data) VALUES ('$titulo', '$descricao', NOW())";
+            $sql = "INSERT INTO anotacoes (titulo , descricao) VALUES ('$titulo', '$descricao')";
             
             //executa o comendo sql 
             $res = mysqli_query($con, $sql);
