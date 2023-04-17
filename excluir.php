@@ -1,5 +1,6 @@
 <?php
     include_once('conexao.php');
+
     $id = $_GET['id'];
 
     $sqlDelete = "DELETE FROM anotacoes WHERE idAnotacoes = $id"; 

@@ -31,13 +31,14 @@
                     //extract($consAnotacoes);
             ?>
             <!--linha de tabela-->
-                    <tr> 
+                    <tr>
                         <!--titulo de tabela em uma coluna-->
                         <th><?php echo $consAnotacoes['titulo'];?></th> 
                         <!--campo de tabela na mesma linha-->
                         <td><?php echo $consAnotacoes['descricao'];?></td>
                         <!--Botão para editar anotação-->
                         <td><a href="editar.php?id=<?php echo $consAnotacoes['idAnotacoes'];?>" method="POST"><button>Editar</button></a></td>
+                        <!--Botão para excluir anotação-->
                         <td><a href="excluir.php?id=<?php echo $consAnotacoes['idAnotacoes'];?>" method="POST"><button>Excluir</button></a></td>
                     </tr>
                 <?php
