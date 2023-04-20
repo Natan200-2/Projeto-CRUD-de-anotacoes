@@ -1,0 +1,44 @@
+html {
+    background-color: #ccd5ae;
+}
+
+h1 {
+    color: #FEFAE0;
+    font-size: 32px;
+}
+
+h2 {
+    color: #FEFAE0;
+    font-size: 25px;
+}
+
+button {
+    background-color: #FAEDCD;
+    border: solid black 1px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#btTabelas{
+    padding: 5px;
+}
+
+#titulo{
+    font-size: 20px;
+    padding: 5px;
+    align-items: top;
+}
+
+table {
+    background-color: #E9EDC9;
+    border: solid 2px;
+    width: fit-content;
+    height: auto;
+    border-radius: 10px;
+}
+
+#novaAnotacao{
+    height: 40px;
+    width: 200px;
+    border-radius: 35px;
+}

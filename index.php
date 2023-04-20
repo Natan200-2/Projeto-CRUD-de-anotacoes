@@ -9,21 +9,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Anotações</title>
 </head>
 <body>
-    <header>
+    <header align="center">
         <div>
             <h1>Início</h1>
             <h2>Lista de Anotações</h2>
         </div>
     </header>
-    <main>
-        <a href="anotacao.php"><button>Nova anotação</button></a>
+    <main align="center">
+        <a href="anotacao.php"><button id="novaAnotacao">Nova anotação</button></a>
         <br>
         <br>
         <br>
-        <table border="2">
+        <table align="center">
             <!--criação de tabela através de consulta ao BD-->
             <?php
                 while($consAnotacoes = mysqli_fetch_assoc($resTA)){
@@ -33,13 +34,13 @@
             <!--linha de tabela-->
                     <tr>
                         <!--titulo de tabela em uma coluna-->
-                        <th><?php echo $consAnotacoes['titulo'];?></th> 
+                        <th id="titulo"><?php echo $consAnotacoes['titulo'];?></th> 
                         <!--campo de tabela na mesma linha-->
-                        <td><?php echo $consAnotacoes['descricao'];?></td>
+                        <td id="anotacao"><?php echo $consAnotacoes['descricao'];?></td>
                         <!--Botão para editar anotação-->
-                        <td><a href="editar.php?id=<?php echo $consAnotacoes['idAnotacoes'];?>" method="POST"><button>Editar</button></a></td>
+                        <td><a href="editar.php?id=<?php echo $consAnotacoes['idAnotacoes'];?>" method="POST"><button id="btTabelas">Editar</button></a></td>
                         <!--Botão para excluir anotação-->
-                        <td><a href="excluir.php?id=<?php echo $consAnotacoes['idAnotacoes'];?>" method="POST"><button>Excluir</button></a></td>
+                        <td><a href="excluir.php?id=<?php echo $consAnotacoes['idAnotacoes'];?>" method="POST"><button id="btTabelas">Excluir</button></a></td>
                     </tr>
                 <?php
                 }
