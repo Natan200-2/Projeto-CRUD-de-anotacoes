@@ -1,3 +1,4 @@
+
 html{
     background-color: #ccd5ae;
 }
@@ -12,18 +13,36 @@ h2{
     font-size: 25px;
 }
 
+form{
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
 button{
     background-color: #FAEDCD;
     border: solid black 1px;
     border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    cursor: pointer;
 }
 
 #saveAnot{
     background-color: #FAEDCD;
+    height: 40px;
+    width: 200px;
     border: solid black 1px;
     border-radius: 10px;
     font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#saveAnot:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 #btTabelas{
@@ -39,13 +58,65 @@ button{
 table {
     background-color: #E9EDC9;
     border: solid 2px;
-    width: fit-content;
-    height: auto;
     border-radius: 10px;
 }
 
+td{
+    font-family: 'Poppins', sans-serif;
+}
+
 #novaAnotacao{
+    font-family: 'Poppins', sans-serif;
     height: 40px;
     width: 200px;
     border-radius: 35px;
+    /*animação de aumentar com compatibilidade*/
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
+#novaAnotacao:hover{
+    /*aciona a animação de aumentar ao passar o mouse*/
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+label{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+input{
+    margin-bottom: 10px;
+    background-color: #FEFAE0;
+    padding: 4px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+textarea{
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    background-color: #FEFAE0;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+
+#voltar:link , #voltar:visited{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+#voltar{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#voltar:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+

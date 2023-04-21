@@ -12,24 +12,18 @@
     <title>Anotação</title>
 </head>
 <body>
-    <a href="index.php">Voltar</a>
     <form action="anotacao.php" method="POST">
         <label for="titulo">Título da anotação:</label> 
-        <br>
         <input type="text" name="titulo">
-        <br>
-        <br>
-        <textarea name="descricao" rows="10" cols="30" placeholder="Digite sua anotação"></textarea>
-        <br>
+        <textarea name="descricao" rows="10" cols="50" placeholder="Digite sua anotação"></textarea>
         <div name="data">
             <?php $dat = date('Y/m/d');
                 echo $dat;
             ?>
         </div>
-        <br>
         <input type="submit" value="Salvar anotação" name="salvar" id="saveAnot">
+        <a href="index.php" id="voltar">Voltar</a>
     </form>
-
     <?php
     //Pega os valores das variáveis de acordo com os atributos names em html
             if(isset($_POST['salvar'])){

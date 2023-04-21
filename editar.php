@@ -38,22 +38,17 @@
     <title>Document</title>
 </head>
 <body>
-<a href="index.php">Voltar</a>
-    <form action="editar.php?id=<?php echo $id?>" method="POST">
+<form action="editar.php?id=<?php echo $row['idAnotacoes'];?>" method="POST">
         <label for="titulo">Título da anotação:</label> 
-        <br>
-        <input name="titulo" type="text" value="<?php echo $row['titulo'];?>">
-        <br>
-        <br>
-        <textarea name="descricao" rows="10" cols="30"><?php echo $row['descricao'];?></textarea>
-        <br>
+        <input type="text" name="titulo" value="<?php echo $row['titulo']?>">
+        <textarea name="descricao" rows="10" cols="50" placeholder="Digite sua anotação"><?php echo $row['descricao']?></textarea>
         <div name="data">
             <?php $dat = date('Y/m/d');
                 echo $dat;
             ?>
         </div>
-        <br>
-        <input type="submit" value="Salvar anotação" name="salvar">
+        <input type="submit" value="Salvar anotação" name="salvar" id="saveAnot">
+        <a href="index.php" id="voltar">Voltar</a>
     </form>
 </body>
 </html>
