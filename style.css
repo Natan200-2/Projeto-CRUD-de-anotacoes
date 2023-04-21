@@ -1,18 +1,25 @@
-html {
+html{
     background-color: #ccd5ae;
 }
 
-h1 {
+h1{
     color: #FEFAE0;
     font-size: 32px;
 }
 
-h2 {
+h2{
     color: #FEFAE0;
     font-size: 25px;
 }
 
-button {
+button{
+    background-color: #FAEDCD;
+    border: solid black 1px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#saveAnot{
     background-color: #FAEDCD;
     border: solid black 1px;
     border-radius: 10px;

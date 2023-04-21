@@ -27,7 +27,7 @@
             ?>
         </div>
         <br>
-        <input type="submit" value="Salvar anotação" name="salvar">
+        <input type="submit" value="Salvar anotação" name="salvar" id="saveAnot">
     </form>
 
     <?php
